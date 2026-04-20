@@ -7,7 +7,7 @@ import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
 
 export default defineConfig([
-    globalIgnores(['dist']),
+    globalIgnores(['dist', 'node_modules']),
     {
         files: ['**/*.{ts,tsx}'],
         extends: [
@@ -19,6 +19,17 @@ export default defineConfig([
         languageOptions: {
             ecmaVersion: 2020,
             globals: globals.browser,
+        },
+        rules: {
+            '@typescript-eslint/no-explicit-any': 'error',
+            '@typescript-eslint/no-unused-vars': [
+                'error',
+                {
+                    argsIgnorePattern: '^_',
+                    varsIgnorePattern: '^_',
+                    caughtErrorsIgnorePattern: '^_',
+                },
+            ],
         },
     },
 ]);
