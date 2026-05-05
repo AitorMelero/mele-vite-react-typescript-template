@@ -1,75 +1,156 @@
-# React + TypeScript + Vite
+# 📦 Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Brief project description. Explain what it does, who it's for, and what problem it solves.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📑 Table of Contents
 
-## React Compiler
+- [📦 Project Name](#-project-name)
+- [🚀 Demo](#-demo)
+- [🧰 Tech Stack](#-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [⚙️ Installation](#️-installation)
+- [🧪 Available Scripts](#-available-scripts)
+- [📖 Usage](#-usage)
+- [🛠️ Configuration](#️-configuration)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🚀 Demo
 
-## Expanding the ESLint configuration
+Add a link to the live demo (if applicable):
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+https://your-demo.com
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧰 Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This project is built with:
+
+- ⚡ Vite
+- ⚛️ React
+- 🟦 TypeScript
+
+You can add more depending on the project:
+
+- React Router
+- Zustand / Redux
+- Tailwind / CSS Modules
+
+---
+
+## 📁 Project Structure
+
+Example structure:
+
 ```
+src/
+│── assets/
+│── components/
+│── hooks/
+│── pages/
+│── services/
+│── styles/
+│── types/
+│── utils/
+│── App.tsx
+│── main.tsx
+```
+
+Describe any important conventions here.
+
+---
+
+## ⚙️ Installation
+
+Follow these steps to run the project locally:
+
+```bash
+# Clone the repository
+git clone <REPO_URL>
+
+# Navigate into the folder
+cd <PROJECT_NAME>
+
+# Install dependencies
+pnpm install
+```
+
+---
+
+## 🧪 Available Scripts
+
+In the project directory, you can run:
+
+```bash
+pnpm run dev            # Start development server
+pnpm run build          # Build for production
+pnpm run preview        # Preview production build
+pnpm run format:check   # Run Prettier to check format errors
+pnpm run format:fix     # Run Prettier to fix format errors
+pnpm run lint:js:check  # Run ESLint to check format errors
+pnpm run lint:js:fix    # Run ESLint to fix format errors
+pnpm run test           # Run tests
+pnpm run test:coverage  # Run tests coverage
+pnpm run test:ui        # Run tests interface
+pnpm run check          # Run all formatters, linters and tests with coverage
+```
+
+Add or remove scripts based on your setup.
+
+---
+
+## 📖 Usage
+
+Explain how to use the project:
+
+- What the app does
+- Main workflow
+- Usage examples
+
+---
+
+## 🛠️ Configuration
+
+Describe environment variables or configuration options:
+
+```
+VITE_API_URL=
+VITE_APP_ENV=
+```
+
+You can explain how to create a `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome 🎉
+
+Steps:
+
+1. Fork the project
+2. Create a branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to your branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Specify the project license here.
+
+Example:
+
+MIT © Your Name
