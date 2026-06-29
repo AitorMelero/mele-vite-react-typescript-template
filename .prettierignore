@@ -5,3 +5,5 @@ coverage
 *.min.js
 *-lock.yaml
 public
+.agents
+*-lock.json
